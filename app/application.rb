@@ -7,7 +7,8 @@ class Application
     if req.path.match(/items/)
       requested_item = req.path.split("/items/").last
       
-      if 
+      if Item.all.detect {|i| i.name == requested_item}
+        item = Item.all.detect {|i| i.name == requested_item}
       
     end
     
