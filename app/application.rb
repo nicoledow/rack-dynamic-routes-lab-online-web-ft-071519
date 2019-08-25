@@ -7,6 +7,8 @@ class Application
     if req.path.match(/items/)
       requested_item = req.path.split("/items/").last
       if Item.all.find {|i| i.name == requested_item}
+        obj = Item.all.find {|i| i.name == requested_item}
+        resp.write "#{obj.price}"
     else
       resp.write "Item not found"
       resp.status = 404
