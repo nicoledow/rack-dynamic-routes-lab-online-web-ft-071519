@@ -13,8 +13,8 @@ class Application
         resp.write "We don't have that item"
       end
     else
-      resp.write "Item not found"
       resp.status = 404
+      resp.write ""
     end
     
   end
