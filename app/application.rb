@@ -9,6 +9,9 @@ class Application
       if Item.all.find {|i| i.name == requested_item}
         obj = Item.all.find {|i| i.name == requested_item}
         resp.write "#{obj.price}"
+      else
+        resp.write "We don't have that item"
+      end
     else
       resp.write "Item not found"
       resp.status = 404
