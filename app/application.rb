@@ -11,7 +11,12 @@ class Application
         item = Item.all.detect {|i| i.name == requested_item}
         resp.write "#{item.price}"
       else
-        resp.write 
+        resp.status = 400
+        resp.write "Item not found"
+      end
+    else
+      resp.status = 404
+      resp.write ""
       
     end
     
