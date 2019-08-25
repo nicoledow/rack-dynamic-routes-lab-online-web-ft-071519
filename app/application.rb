@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new
     
     if req.path.match(/items/)
-      
+      if 
     else
       resp.write "Item not found"
       resp.status = 404
