@@ -9,6 +9,9 @@ class Application
       
       if Item.all.detect {|i| i.name == requested_item}
         item = Item.all.detect {|i| i.name == requested_item}
+        resp.write "#{item.price}"
+      else
+        resp.write 
       
     end
     
